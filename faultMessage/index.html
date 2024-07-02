@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>故障訊息產生器</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 事件部分 -->
+      <div class="section">
+        <h1>事件：</h1>
+        <div class="form-row">
+          <label for="report">回報股別:</label>
+          <select id="report" name="report" onchange="updateDetails()">
+            <!-- 選項將由 JavaScript 動態生成 -->
+          </select>
+          <label for="incidentDescription" style="margin-left: 20px"
+            >事故簡述：</label
+          >
+          <textarea
+            id="incidentDescription"
+            name="incidentDescription"
+            rows="4"
+            style="flex: 2"
+            oninput="updateDetails()"
+          ></textarea>
+        </div>
+
+        <div class="form-row">
+          <label for="reportNumber">第幾報:</label>
+          <select
+            id="reportNumber"
+            name="reportNumber"
+            style="flex: 0.5"
+            onchange="updateDetails()"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="notificationDate">通報日期：</label>
+          <input
+            type="date"
+            id="notificationDate"
+            name="notificationDate"
+            onchange="updateDetails()"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="notificationTime">通報時間：</label>
+          <input
+            type="time"
+            id="notificationTime"
+            name="notificationTime"
+            onchange="updateDetails()"
+          />
+        </div>
+
+        <div class="form-row">
+          <label for="isComplete">已完報？</label>
+          <input
+            type="checkbox"
+            id="isComplete"
+            name="isComplete"
+            onchange="updateDetails()"
+          />
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 延誤和影響區間部分 -->
+      <div class="section">
+        <h1>影響區間：</h1>
+        <div class="form-row">
+          <label for="delay">延誤否：</label>
+          <select id="delay" name="delay" onchange="updateDetails()">
+            <option value="否">否</option>
+            <option value="是">是</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="influenceInterval">影響區間：</label>
+          <select
+            id="influenceInterval"
+            name="influenceInterval"
+            onchange="updateDetails()"
+          >
+            <option value="無">無</option>
+            <option value="有">有</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="simpleDescription" style="margin-left: 20px"
+            >簡易敘述：</label
+          >
+          <textarea
+            id="simpleDescription"
+            name="simpleDescription"
+            rows="4"
+            style="flex: 2"
+            oninput="updateDetails()"
+          ></textarea>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- 處理情況部分 -->
+      <div class="section">
+        <h1>處理情況：</h1>
+        <div class="form-row">
+          <label for="departureTime">出發時間：</label>
+          <input
+            type="time"
+            id="departureTime"
+            name="departureTime"
+            onchange="updateDetails()"
+          />
+        </div>
+        <div class="form-row">
+          <label for="arrivalTime">抵達時間：</label>
+          <input
+            type="time"
+            id="arrivalTime"
+            name="arrivalTime"
+            onchange="updateDetails()"
+          />
+        </div>
+        <div class="form-row">
+          <label for="departureLocation">出發地點：</label>
+          <input
+            type="text"
+            id="departureLocation"
+            name="departureLocation"
+            oninput="updateDetails()"
+          />
+        </div>
+        <div class="form-row">
+          <label for="personnelSelected">現場負責人：</label>
+          <select
+            id="personnelSelected"
+            name="personnelSelected"
+            multiple
+            onchange="updateDetails()"
+          >
+            <!-- 選項將由 JavaScript 動態生成 -->
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="processDescription" style="margin-left: 20px"
+            >處理過程：</label
+          >
+          <textarea
+            id="processDescription"
+            name="processDescription"
+            rows="4"
+            style="flex: 2"
+            oninput="updateDetails()"
+          >
+a.
+b.
+c.</textarea
+          >
+        </div>
+      </div>
+
+      <!-- 結果框和複製按鈕部分 -->
+      <div class="form-row centered-container">
+        <div id="result" class="text-block">哈哈哈哈哈哈</div>
+        <button id="button" class="button-29" role="button">
+          點我複製文字
+        </button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

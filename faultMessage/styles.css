@@ -1,0 +1,146 @@
+body {
+  background-color: rgb(161, 236, 227);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section {
+  margin-bottom: 20px;
+  background-color: #e0f7fa;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+hr {
+  border: 1px solid #006064;
+  margin: 20px 0;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.text-block {
+  padding: 20px;
+  border: 8px solid #000000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(177, 13, 13, 0.1);
+  font-size: 2rem;
+  text-align: left;
+  width: auto;
+  white-space: pre-wrap;
+  margin-bottom: 20px;
+}
+
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: auto;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding: 30px 60px; /* 加大按鈕的內邊距 */
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 3rem; /* 加大按鈕文字的字體大小 */
+  margin-bottom: 20px;
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+select,
+input[type="text"],
+textarea {
+  font-size: 1.5rem;
+  min-width: 200px;
+}
+
+textarea {
+  resize: vertical;
+  flex: 2;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type="time"],
+input[type="date"] {
+  font-size: 1.5rem;
+}
+
+.form-row label {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+option {
+  font-size: 1.5rem;
+}
+
+#isComplete {
+  width: 20px;
+  height: 20px;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .form-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
