@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>供電廠-維修助理網頁</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .button-container {
+        text-align: center;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      @media (max-width: 600px) {
+        button {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <a href="./faultMessage/index.html">
+        <button>故障訊息產生器</button>
+      </a>
+      <a href="./TRTCrepairDescription/index.html">
+        <button>供電設備重大故障搶修說明書</button>
+      </a>
+    </div>
+  </body>
+</html>
