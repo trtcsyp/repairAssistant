@@ -3,9 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flowchart Webpage</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+      .main-process,
+      .details {
+        flex: 1;
+        padding: 20px;
+      }
+      .main-process {
+        background-color: #f9f9f9;
+      }
+      .details {
+        background-color: #fff;
+        border-left: 1px solid #ddd;
+      }
+      .step {
+        margin: 20px 0;
+        position: relative;
+      }
+      .step-number {
+        font-size: 24px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .description {
+        margin: 10px 0;
+      }
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .details {
+          border-left: none;
+          border-top: 1px solid #ddd;
+        }
+      }
+    </style>
   </head>
   <body>
-    coming soon ><
+    <div class="container">
+      <div class="main-process">
+        <div class="step" id="step1">
+          <span class="step-number">1</span> 掌握狀況
+        </div>
+        <div class="step" id="step2">
+          <span class="step-number">2</span>
+          目視檢查判斷故障電纜故障型態，回報主管並進行隔離
+        </div>
+        <div class="step" id="step3">
+          <span class="step-number">3</span> 評估所需耗時時間，可報行控中心
+        </div>
+        <div class="step" id="step4">
+          <span class="step-number">4</span>
+          隔離後，確認故障隔離範圍及可送電範圍，通知行控中心送電
+        </div>
+        <div class="step" id="step5">
+          <span class="step-number">5</span>
+          送電後，留守現場待命，觀察電纜情況與電力控制員保持聯繫
+        </div>
+      </div>
+      <div class="details">
+        <div class="description" data-step="1">
+          A. 人員可確認故障地點及影響範圍，回報主管及備案
+          電纜搭修工具前往事故現場。 B.
+          到達事故現場，依本公司相關規定申請進入軌道接 標。
+        </div>
+        <div class="description" data-step="2">
+          故障電纜故障型態分離方式：
+          型態1：故障電纜故障點於進出站電纜線槽內，隔離方式：將故障電纜線包裹後，使用絕緣線夾，絕緣線夾加防水絕緣膠帶，防水絕緣膠帶外加防水線夾固定，使用不銹鋼線、金屬線槽、支架等接續。
+          型態2：故障電纜故障位於預埋管或折除，隔離方式：將故障電纜線包裹後，立行分割斷折除，使用絕緣物包裹故障電纜線束不與金屬物接觸。
+          型態3：故障電纜故障位於預埋管內出線處，隔離方式：使用絕緣物包裹故障電纜線束不與金屬預埋口接觸，若無法包裹則採用型態2方式隔離。
+        </div>
+        <div class="description" data-step="3">
+          隔離所需時間： 型態1：午餐模式 A. 迴路三試點接續：約5分鐘 B.
+          電纜維修時間2.至故障，這項需現場接續電纜
+          (500mm線240mm2)及其錯誤型態：約5分鐘 型態2：迴路三試點接續：約30分鐘
+          A. 使用MDS電纜端接續：約40分鐘 B.
+          電纜局端接續MDS電纜端接續，為繼電性維修時間(含接續設備型態2)：約30分鐘
+          型態3：故障電纜線包裹後，使用絕緣物包裹故障電纜束不與金屬預埋口接觸：
+          隔離所需時間：型態2隔離作業時間：約30-50分鐘。
+        </div>
+        <div class="description" data-step="4">
+          評估所需耗時時間，可報行控中心
+        </div>
+        <div class="description" data-step="5">
+          隔離後，確認故障隔離範圍及可送電範圍，通知行控中心送電
+        </div>
+      </div>
+    </div>
   </body>
 </html>
