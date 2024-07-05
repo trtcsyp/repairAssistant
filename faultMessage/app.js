@@ -14,34 +14,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 從 JSON 文件加載選項並更新 select 元素
   fetch("stationDB.json")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+      return response.json();
+    })
     .then((data) => {
       const reportSelect = document.getElementById("report");
 
       data.forEach((item) => {
         const option = document.createElement("option");
-        option.value = item["股別"];
-        option.text = item["股別"];
+        option.value = item["四級單位"];
+        option.text = item["四級單位"];
         reportSelect.appendChild(option);
       });
 
-      gatherSelections();
+      updatePersonnel();
     })
     .catch((error) => console.error("Error loading station JSON data:", error));
 
   fetch("personnelDB.json")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+      return response.json();
+    })
     .then((data) => {
-      const personnelSelect = document.getElementById("personnelSelected");
-
-      data.forEach((item) => {
-        const option = document.createElement("option");
-        option.value = item["人員"];
-        option.text = item["人員"];
-        personnelSelect.appendChild(option);
-      });
-
-      gatherSelections();
+      window.personnelData = data;
     })
     .catch((error) =>
       console.error("Error loading personnel JSON data:", error)
@@ -59,6 +60,31 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("您的故障訊息已複製: " + textToCopy);
   });
 });
+
+function updatePersonnel() {
+  const reportSelect = document.getElementById("report");
+  const selectedUnit = reportSelect.value;
+  const personnelSelect = document.getElementById("personnelSelected");
+
+  // 清空現有選項
+  personnelSelect.innerHTML = "";
+
+  // 根據選擇的四級單位添加對應的人員選項
+  if (window.personnelData) {
+    window.personnelData.forEach((item) => {
+      if (item["四級單位"] === selectedUnit) {
+        item["姓名"].forEach((name) => {
+          const option = document.createElement("option");
+          option.value = name;
+          option.text = name;
+          personnelSelect.appendChild(option);
+        });
+      }
+    });
+  }
+
+  updateDetails();
+}
 
 function gatherSelections() {
   let reportSelect = document.getElementById("report");
@@ -93,7 +119,7 @@ function gatherSelections() {
     (option) => option.text
   );
   const personnelText =
-    selectedPersonnel.join("、") + `共${selectedPersonnel.length}員`;
+    selectedPersonnel.join("、") + ` 共${selectedPersonnel.length}員`;
 
   const processDescription =
     document.getElementById("processDescription").value;

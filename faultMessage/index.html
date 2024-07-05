@@ -13,7 +13,7 @@
         <h1>事件：</h1>
         <div class="form-row">
           <label for="report">回報股別:</label>
-          <select id="report" name="report" onchange="updateDetails()">
+          <select id="report" name="report" onchange="updatePersonnel()">
             <!-- 選項將由 JavaScript 動態生成 -->
           </select>
           <label for="incidentDescription" style="margin-left: 20px"
@@ -27,7 +27,6 @@
             oninput="updateDetails()"
           ></textarea>
         </div>
-
         <div class="form-row">
           <label for="reportNumber">第幾報:</label>
           <select
@@ -48,7 +47,6 @@
             <option value="10">10</option>
           </select>
         </div>
-
         <div class="form-row">
           <label for="notificationDate">通報日期：</label>
           <input
@@ -58,7 +56,6 @@
             onchange="updateDetails()"
           />
         </div>
-
         <div class="form-row">
           <label for="notificationTime">通報時間：</label>
           <input
@@ -68,7 +65,6 @@
             onchange="updateDetails()"
           />
         </div>
-
         <div class="form-row">
           <label for="isComplete">已完報？</label>
           <input
@@ -79,9 +75,7 @@
           />
         </div>
       </div>
-
       <hr />
-
       <!-- 延誤和影響區間部分 -->
       <div class="section">
         <h1>影響區間：</h1>
@@ -116,9 +110,7 @@
           ></textarea>
         </div>
       </div>
-
       <hr />
-
       <!-- 處理情況部分 -->
       <div class="section">
         <h1>處理情況：</h1>
@@ -177,7 +169,6 @@ c.</textarea
           >
         </div>
       </div>
-
       <!-- 結果框和複製按鈕部分 -->
       <div class="form-row centered-container">
         <div id="result" class="text-block">哈哈哈哈哈哈</div>
@@ -186,7 +177,6 @@ c.</textarea
         </button>
       </div>
     </div>
-
     <script src="app.js"></script>
   </body>
 </html>
