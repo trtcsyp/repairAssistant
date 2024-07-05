@@ -3,8 +3,8 @@ import pandas as pd
 # 讀取 Excel 文件的路徑
 file_path = 'C:/Users/User/Desktop/MRT DATA/TRTCrepair/repairDB/repairDB.xlsx'
 
-# 讀取數據
-df = pd.read_excel(file_path, sheet_name='供電廠人員清單')
+# 讀取第一個工作表
+df = pd.read_excel(file_path, sheet_name=0)  # 使用索引0來讀取第一個工作表
 
 # 創建四級單位與對應姓名的字典
 grouped = df.groupby('四級單位')['姓名'].apply(list).reset_index()
@@ -26,6 +26,5 @@ with open(station_json_path, 'w', encoding='utf-8') as f:
 
 with open(personnel_json_path, 'w', encoding='utf-8') as f:
     f.write(personnel_json_data)
-
 
 print("JSON file has been successfully created and saved")
