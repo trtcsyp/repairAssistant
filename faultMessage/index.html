@@ -7,18 +7,30 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header>
+      <h1>故障訊息產生器</h1>
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="modeToggle" onchange="toggleMode()" />
+          <span class="slider round"></span>
+        </label>
+        <span id="modeText">淺色模式</span>
+      </div>
+    </header>
     <div class="container">
       <!-- 事件部分 -->
       <div class="section">
-        <h1>事件：</h1>
+        <h2>事件：</h2>
         <div class="form-row">
           <label for="report">回報股別:</label>
-          <select id="report" name="report" onchange="updatePersonnel()">
-            <!-- 選項將由 JavaScript 動態生成 -->
-          </select>
-          <label for="incidentDescription" style="margin-left: 20px"
-            >事故簡述：</label
-          >
+          <select
+            id="report"
+            name="report"
+            onchange="updatePersonnel()"
+          ></select>
+        </div>
+        <div class="form-row">
+          <label for="incidentDescription">事故簡述：</label>
           <textarea
             id="incidentDescription"
             name="incidentDescription"
@@ -78,24 +90,50 @@
       <hr />
       <!-- 延誤和影響區間部分 -->
       <div class="section">
-        <h1>影響區間：</h1>
+        <h2>影響區間：</h2>
         <div class="form-row">
-          <label for="delay">延誤否：</label>
-          <select id="delay" name="delay" onchange="updateDetails()">
-            <option value="否">否</option>
-            <option value="是">是</option>
-          </select>
+          <label>延誤否：</label>
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="delayNo"
+              name="delay"
+              value="否"
+              onchange="updateDetails()"
+              checked
+            />
+            <label for="delayNo">否</label>
+            <input
+              type="radio"
+              id="delayYes"
+              name="delay"
+              value="是"
+              onchange="updateDetails()"
+            />
+            <label for="delayYes">是</label>
+          </div>
         </div>
         <div class="form-row">
-          <label for="influenceInterval">影響區間：</label>
-          <select
-            id="influenceInterval"
-            name="influenceInterval"
-            onchange="updateDetails()"
-          >
-            <option value="無">無</option>
-            <option value="有">有</option>
-          </select>
+          <label>影響區間：</label>
+          <div class="radio-group">
+            <input
+              type="radio"
+              id="influenceNone"
+              name="influenceInterval"
+              value="無"
+              onchange="updateDetails()"
+              checked
+            />
+            <label for="influenceNone">無</label>
+            <input
+              type="radio"
+              id="influenceYes"
+              name="influenceInterval"
+              value="有"
+              onchange="updateDetails()"
+            />
+            <label for="influenceYes">有</label>
+          </div>
         </div>
         <div class="form-row">
           <label for="simpleDescription" style="margin-left: 20px"
@@ -113,7 +151,7 @@
       <hr />
       <!-- 處理情況部分 -->
       <div class="section">
-        <h1>處理情況：</h1>
+        <h2>處理情況：</h2>
         <div class="form-row">
           <label for="departureTime">出發時間：</label>
           <input
@@ -148,9 +186,7 @@
             name="personnelSelected"
             multiple
             onchange="updateDetails()"
-          >
-            <!-- 選項將由 JavaScript 動態生成 -->
-          </select>
+          ></select>
         </div>
         <div class="form-row">
           <label for="processDescription" style="margin-left: 20px"
@@ -171,7 +207,7 @@ c.</textarea
       </div>
       <!-- 結果框和複製按鈕部分 -->
       <div class="form-row centered-container">
-        <div id="result" class="text-block">哈哈哈哈哈哈</div>
+        <div id="result" class="text-block"></div>
         <button id="button" class="button-29" role="button">
           點我複製文字
         </button>

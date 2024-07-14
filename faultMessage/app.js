@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updatePersonnel() {
   const reportSelect = document.getElementById("report");
-  const selectedUnit = reportSelect.value;
+  const selectedUnit = reportSelect ? reportSelect.value : "";
   const personnelSelect = document.getElementById("personnelSelected");
 
   // 清空現有選項
@@ -88,7 +88,9 @@ function updatePersonnel() {
 
 function gatherSelections() {
   let reportSelect = document.getElementById("report");
-  let reportText = reportSelect.options[reportSelect.selectedIndex].text;
+  let reportText = reportSelect
+    ? reportSelect.options[reportSelect.selectedIndex].text
+    : "";
 
   let reportNumber = document.getElementById("reportNumber").value;
   let notificationDate = document.getElementById("notificationDate").value;
@@ -102,8 +104,10 @@ function gatherSelections() {
   let reportStatus = isComplete ? "(完)" : "";
 
   // Update impact range details
-  const delay = document.getElementById("delay").value;
-  const influenceInterval = document.getElementById("influenceInterval").value;
+  const delay = document.querySelector('input[name="delay"]:checked').value;
+  const influenceInterval = document.querySelector(
+    'input[name="influenceInterval"]:checked'
+  ).value;
   const simpleDescription = document.getElementById("simpleDescription").value;
 
   // Combine date and time for full datetime
@@ -118,8 +122,9 @@ function gatherSelections() {
   const selectedPersonnel = Array.from(personnelSelect.selectedOptions).map(
     (option) => option.text
   );
-  const personnelText =
-    selectedPersonnel.join("、") + ` 共${selectedPersonnel.length}員`;
+  const personnelText = `${selectedPersonnel.join("、")} 共${
+    selectedPersonnel.length
+  }員`;
 
   const processDescription =
     document.getElementById("processDescription").value;
@@ -141,4 +146,31 @@ function gatherSelections() {
 
 function updateDetails() {
   gatherSelections();
+}
+
+function toggleMode() {
+  const body = document.body;
+  const header = document.querySelector("header");
+  const container = document.querySelector(".container");
+  const sections = document.querySelectorAll(".section");
+  const textBlock = document.querySelector(".text-block");
+  const button = document.querySelector(".button-29");
+  const inputs = document.querySelectorAll(
+    "input[type='time'], input[type='date'], select, input[type='text'], textarea"
+  );
+  const modeText = document.getElementById("modeText");
+
+  body.classList.toggle("dark-mode");
+  header.classList.toggle("dark-mode");
+  container.classList.toggle("dark-mode");
+  sections.forEach((section) => section.classList.toggle("dark-mode"));
+  textBlock.classList.toggle("dark-mode");
+  button.classList.toggle("dark-mode");
+  inputs.forEach((input) => input.classList.toggle("dark-mode"));
+
+  if (body.classList.contains("dark-mode")) {
+    modeText.innerText = "深夜模式";
+  } else {
+    modeText.innerText = "淺色模式";
+  }
 }
