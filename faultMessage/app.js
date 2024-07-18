@@ -59,6 +59,19 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.removeChild(tempInput);
     alert("您的故障訊息已複製: " + textToCopy);
   });
+
+  // 處理多選下拉菜單的改進行為
+  const personnelSelect = document.getElementById("personnelSelected");
+
+  personnelSelect.addEventListener("mousedown", function (event) {
+    let target = event.target;
+
+    if (target.tagName === "OPTION") {
+      target.selected = !target.selected; // 反轉選取狀態
+      event.preventDefault(); // 防止原生事件行為
+      updateDetails(); // 立即更新結果框
+    }
+  });
 });
 
 function updatePersonnel() {
