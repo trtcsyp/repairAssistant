@@ -9,68 +9,256 @@
   <body>
     <div class="container">
       <h1>供電設備重大故障搶修工作說明書</h1>
-      <a href="./page/1.html" class="button disabled"
-        >(一)BSS站內22kV開關盤斷路器全數跳脫，RTU全部離線（控制電源中斷）</a
-      >
-      <a href="./page/2.html" class="button disabled"
-        >(二)TSS站內22kV開關盤斷路器全數跳脫，RTU全部離線（控制電源中斷）</a
-      >
-      <a href="./page/3.html" class="button disabled"
-        >(三)BSS匯流排發生故障，使同一匯流排上之開關盤全數跳脫（匯流排差動保護電驛（87B）動作）</a
-      >
-      <a href="./page/4.html" class="button disabled"
-        >(四)TSS匯流排發生故障，使同一匯流排上之開關盤全數跳脫（匯流排差動保護電驛（87B）動作）</a
-      >
-      <a href="./page/5.html" class="button disabled"
-        >(五)TSS
-        22kV電纜發生故障，使電纜兩端之開關盤皆跳脫（線路差動保護電驛(87L)動作）</a
-      >
-      <a href="./method/6m.html" class="button"
-        >(六)SSS
-        22kV電纜發生故障，使主變電站車站用電之22kV開關盤單盤跳脫（線路過電流保護電驛(50/51N)動作）</a
-      >
-      <a href="./page/7.html" class="button disabled"
-        >(七)單站動力變電站全數直流盤及連結整流變壓器的22kV開關盤，與相鄰站相鄰三軌直流饋線盤全數跳脫，直流設備發生框架漏電故障（Frame
-        Fault/EARTH FAULT/DC FRAME LEAKAGE TRIP動作）</a
-      >
-      <a href="./page/8.html" class="button disabled"
-        >(八)三軌供電區間直流盤單盤跳脫（緊急跳脫系統(ETS)或傳輸跳脫迴路斷線或其他）</a
-      >
-      <a href="./card/card9.html" class="button"
-        >(九)TSS三軌動力用電直流電纜(道旁設備)冒煙、熔蝕_V4</a
-      >
-      <a href="./page/10.html" class="button disabled"
-        >(十)TSS直流盤自動投入後又再連續跳脫</a
-      >
-      <a href="./page/11.html" class="button disabled"
-        >(十一)主線/機廠三軌電力轉供</a
-      >
-      <a href="./page/12.html" class="button disabled"
-        >(十二)BSS主變壓器上下游開關盤跳脫之轉供作業</a
-      >
-      <a href="./page/13.html" class="button disabled"
-        >(十三)機廠邊界之預導開關無法動作</a
-      >
-      <a href="./page/14.html" class="button disabled"
-        >(十四)主變電站氣體絕緣變壓器(GIT)散熱風扇全部停止運轉處理程序</a
-      >
-      <a href="./page/15.html" class="button disabled">15.直流盤發生持續短路</a>
-      <a href="./page/16.html" class="button disabled"
-        >(十五)三軌同一供電區間直流盤兩盤跳脫且皆無法遙控復歸</a
-      >
-      <a href="./page/17.html" class="button disabled"
-        >(十六)動力變電站發生框架故障，且相同供電區間之鄰站直流饋線盤同時發生過電流跳脫</a
-      >
-      <a href="./page/18.html" class="button disabled"
-        >(十七)高運量全線直流開關盤無法遙控送電</a
-      >
-      <a href="./page/19.html" class="button disabled"
-        >(十八)台電線路異常，導致2座(含以上)TSS發生整流器過電壓故障跳脫，造成H盤閉鎖且無法復歸</a
-      >
-      <a href="./page/20.html" class="button disabled"
-        >(十九)同一供電區段兩盤直流盤跳脫且無主故障訊息，投入後又再連續跳脫</a
-      >
+      <div class="main-buttons">
+        <a href="./card/card1.html" class="button"
+          >(一)BSS站內22kV開關盤斷路器全數跳脫，RTU全部離線（控制電源中斷）</a
+        >
+
+        <a href="./card/card2.html" class="button"
+          >(二)TSS站內22kV開關盤斷路器全數跳脫，RTU全部離線（控制電源中斷）</a
+        >
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons3')"
+          >(三)BSS匯流排發生故障，使同一匯流排上之開關盤全數跳脫（匯流排差動保護電驛（87B）動作）</a
+        >
+        <div class="sub-buttons" id="subButtons3">
+          <a href="./card/card3_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card3_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons4')"
+          >(四)TSS匯流排發生故障，使同一匯流排上之開關盤全數跳脫（匯流排差動保護電驛（87B）動作）</a
+        >
+        <div class="sub-buttons" id="subButtons4">
+          <a href="./card/card4_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card4_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons5')"
+          >(五)TSS
+          22kV電纜發生故障，使電纜兩端之開關盤皆跳脫（線路差動保護電驛(87L)動作）</a
+        >
+        <div class="sub-buttons" id="subButtons5">
+          <a href="./card/card5_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card5_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons6')"
+          >(六)SSS
+          22kV電纜發生故障，使主變電站車站用電之22kV開關盤單盤跳脫（線路過電流保護電驛(50/51N)動作）</a
+        >
+        <div class="sub-buttons" id="subButtons6">
+          <a href="./card/card6_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card6_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons7')"
+          >(七)單站動力變電站全數直流盤及連結整流變壓器的22kV開關盤，與相鄰站相鄰三軌直流饋線盤全數跳脫，直流設備發生框架漏電故障（Frame
+          Fault/EARTH FAULT/DC FRAME LEAKAGE TRIP動作）</a
+        >
+        <div class="sub-buttons" id="subButtons7">
+          <a href="./card/card7_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card7_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons8')"
+          >(八)三軌供電區間直流盤單盤跳脫（緊急跳脫系統(ETS)或傳輸跳脫迴路斷線或其他）</a
+        >
+        <div class="sub-buttons" id="subButtons8">
+          <a href="./card/card8_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a href="./card/card9.html" class="button"
+          >(九)TSS三軌動力用電直流電纜(道旁設備)冒煙、熔蝕_V4</a
+        >
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons10')"
+          >(十)TSS直流盤自動投入後又再連續跳脫</a
+        >
+        <div class="sub-buttons" id="subButtons10">
+          <a href="./card/card10_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card10_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons11')"
+          >(十一)主線/機廠三軌電力轉供</a
+        >
+        <div class="sub-buttons" id="subButtons11">
+          <a href="./card/card11_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons12')"
+          >(十二)BSS主變壓器上下游開關盤跳脫之轉供作業</a
+        >
+        <div class="sub-buttons" id="subButtons12">
+          <a href="./card/card12_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card12_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons13')"
+          >(十三)機廠邊界之預導開關無法動作</a
+        >
+        <div class="sub-buttons" id="subButtons13">
+          <a href="./card/card13_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons14')"
+          >(十四)主變電站氣體絕緣變壓器(GIT)散熱風扇全部停止運轉處理程序</a
+        >
+        <div class="sub-buttons" id="subButtons14">
+          <a href="./card/card14_xinsong.html" class="sub-button">信松線</a>
+        </div>
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons15')"
+          >(十五)直流盤發生持續短路</a
+        >
+        <div class="sub-buttons" id="subButtons15">
+          <a href="./card/card15_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card15_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons16')"
+          >(十六)三軌同一供電區間直流盤兩盤跳脫且皆無法遙控復歸</a
+        >
+        <div class="sub-buttons" id="subButtons16">
+          <a href="./card/card16_xinsong.html" class="sub-button">信松線</a>
+
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons17')"
+          >(十七)動力變電站發生框架故障（Frame Fault/EARTH
+          FAULT動作），且相同供電區間之鄰站直流饋線盤同時發生過電流跳脫</a
+        >
+        <div class="sub-buttons" id="subButtons17">
+          <a href="./card/card17_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card17_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons18')"
+          >(十八)讚讚讚讚讚讚</a
+        >
+        <div class="sub-buttons" id="subButtons18">
+          <a href="./card/card18_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card18_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons19')"
+          >(十九)讚讚讚讚讚讚讚</a
+        >
+        <div class="sub-buttons" id="subButtons19">
+          <a href="./card/card19_xinsong.html" class="sub-button">信松線</a>
+          <a href="./card/card19_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+
+        <a
+          href="#"
+          class="button"
+          onclick="showSubButtons(event, 'subButtons20')"
+          >(二十)同一供電區段兩盤直流盤跳脫且無主故障訊息</a
+        >
+        <div class="sub-buttons" id="subButtons20">
+          <a href="./card/card20_danxinzhong.html" class="sub-button"
+            >淡新中線</a
+          >
+        </div>
+      </div>
     </div>
     <a href="./indexRoot.html" class="button">上一頁</a>
+    <script>
+      function showSubButtons(event, subButtonsId) {
+        event.preventDefault();
+        var subButtons = document.getElementById(subButtonsId);
+        var allSubButtons = document.querySelectorAll(".sub-buttons");
+        allSubButtons.forEach(function (buttonGroup) {
+          if (buttonGroup !== subButtons) {
+            buttonGroup.style.display = "none";
+          }
+        });
+        if (
+          subButtons.style.display === "none" ||
+          subButtons.style.display === ""
+        ) {
+          subButtons.style.display = "block";
+        } else {
+          subButtons.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

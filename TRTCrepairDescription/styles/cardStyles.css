@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #4597b5;
   color: #333;
+  font-weight: bold;
 }
 .container {
   max-width: 800px;
@@ -38,6 +39,9 @@ h1 {
 .red-text {
   color: red;
   font-weight: bold;
+}
+.yellow-background {
+  background-color: #ffff00;
 }
 .red-text-underline {
   color: red;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>維修指引小卡</title>
+    <link rel="stylesheet" href="../styles/cardStyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>同一供電區段兩盤直流盤跳脫且無主故障訊息</h1>
+      <div class="section">
+        <p><span class="red-text">※僅適用淡新中線，請攜帶PLC整組備品※</span></p>
+        <p>
+          <span class="yellow-background">故障警訊：</span>CB is off；Transfer
+          trip frame fault
+        </p>
+        <p>
+          <span class="yellow-background">故障樣態：</span
+          >同一供電區段2盤直流盤跳脫後未自動投入，同一供電區段2盤直流盤跳脫後未自動投入。
+        </p>
+        <p>
+          <span class="yellow-background">故障原因：</span>直流盤<span
+            class="red-text"
+            >PLC輸出模組異常</span
+          >持續發送<span class="red-text">傳輸跳脫訊號</span>。
+        </p>
+        <p><span class="yellow-background">處置方式：</span></p>
+        <p>
+          ①人員現場<span class="red-text">關閉傳輸跳脫隔離開關(F12)</span>。
+        </p>
+        <p>②行控逕控投入直流盤恢復三軌用電。</p>
+      </div>
+      <div class="date">供電廠20240701</div>
+    </div>
+  </body>
+</html>

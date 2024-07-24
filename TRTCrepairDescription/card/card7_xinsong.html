@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>維修指引小卡</title>
+    <link rel="stylesheet" href="../styles/cardStyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>直流設備發生框架漏電故障（Frame Fault/EARTH FAULT動作）</h1>
+      <div class="section">
+        <p>
+          <span class="yellow-background">故障警訊：</span>
+          直流盤框架故障跳脫（<span class="red-text">64DC-1</span>）。
+        </p>
+        <p>
+          <span class="yellow-background">故障樣態：</span
+          >單站動力變電站全數直流盤及連結整流變壓器的22kV開關盤，與相鄰站相鄰三軌直流饋線盤全數跳脫。
+        </p>
+        <p>
+          <span class="yellow-background">故障原因：</span>
+          直流設備發生框架漏電故障。
+        </p>
+        <p><span class="yellow-background">處理方式：</span></p>
+        <p>1. 行控遙控投入直流盤恢復三軌用電。</p>
+        <p>
+          2. 若鄰站直流盤無法投入，將<span class="red-text"
+            >當站X3-34，35短接</span
+          >。
+        </p>
+        <p>3. 無法遙控投入當站隔離開關，人員至現場手動投入隔離開關。</p>
+      </div>
+      <div class="date">供電廠20240701</div>
+    </div>
+    <div class="container">
+      <h1>
+        三軌供電區間直流盤單盤跳脫（緊急跳脫系統(ETS)或傳輸跳脫迴路斷線或其他）
+      </h1>
+      <p>
+        <span class="yellow-background">故障警訊：</span>「ETC
+        高速斷路器投入允許 警報(ALARM)」 「閉鎖/緊急手動跳脫/外部連鎖跳脫
+        (TRIP)」但無顯示ETS ID碼。
+      </p>
+      <p><span class="yellow-background">故障樣態：</span>直流盤單盤跳脫。</p>
+      <p>
+        <span class="yellow-background">故障原因：</span
+        >緊急跳脫系統(ETS)斷線/傳輸跳脫迴路斷線。
+      </p>
+      <p>
+        <span class="yellow-background">處置方式： </span>
+      </p>
+      <p>1.ETC OVERRIDE及解除直流盤閉鎖後手動送電。</p>
+      <p>
+        2.<span class="red-text">X3-32、33點短接使K19B1激磁</span>。後手動送電。
+      </p>
+      <div class="date">供電廠20240701</div>
+    </div>
+  </body>
+</html>

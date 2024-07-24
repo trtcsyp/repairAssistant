@@ -25,6 +25,22 @@ h1 {
 .button:hover {
   background-color: #45a049;
 }
+.sub-button {
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #2196f3;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.sub-button:hover {
+  background-color: #1976d2;
+}
 .disabled {
   color: #999;
   background-color: #ccc;
@@ -40,4 +56,8 @@ h1 {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sub-buttons {
+  display: none;
+  margin-top: 10px;
 }
