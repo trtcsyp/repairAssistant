@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 讀取 Excel 文件的路徑
-file_path = 'C:/Users/User/Desktop/MRT DATA/TRTCrepair/repairDB/repairDB.xlsx'
+file_path = 'D:/repairAssistant/repairDB/repairDB.xlsx'
 
 # 讀取第一個工作表
 df = pd.read_excel(file_path, sheet_name=0)  # 使用索引0來讀取第一個工作表
@@ -17,8 +17,8 @@ station_json_data = station_df.to_json(orient='records', force_ascii=False)
 personnel_json_data = grouped.to_json(orient='records', force_ascii=False)
 
 # 指定保存 JSON 文件的路徑
-station_json_path = 'C:/Users/User/Desktop/MRT DATA/TRTCrepair/faultMessage/stationDB.json'
-personnel_json_path = 'C:/Users/User/Desktop/MRT DATA/TRTCrepair/faultMessage/personnelDB.json'
+station_json_path = 'D:/repairAssistant/faultMessage/stationDB.json'
+personnel_json_path = 'D:/repairAssistant/faultMessage/personnelDB.json'
 
 # 保存 JSON 文件
 with open(station_json_path, 'w', encoding='utf-8') as f:
