@@ -182,7 +182,7 @@ function toggleMode() {
   inputs.forEach((input) => input.classList.toggle("dark-mode"));
 
   if (body.classList.contains("dark-mode")) {
-    modeText.innerText = "深夜模式";
+    modeText.innerText = "深色模式";
   } else {
     modeText.innerText = "淺色模式";
   }

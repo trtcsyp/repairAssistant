@@ -216,7 +216,7 @@ textarea {
   }
 }
 
-/* 深夜模式 */
+/* 深色模式 */
 body.dark-mode {
   background-color: #181818;
   color: #ccc;
