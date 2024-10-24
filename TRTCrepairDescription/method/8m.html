@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>現場維修人員應變處理方式</title>
+    <link rel="stylesheet" href="../styles/stylesM.css" />
+  </head>
+  <body>
+    <h1>現場維修人員應變處理方式</h1>
+    <div class="flowchart">
+      <div class="step">
+        <h3>1 主線：</h3>
+        <h4>1.1淡新中線：</h4>
+        <p>
+            <strong>A. 確認/檢視</strong><br />
+            行控遙控ETS OVERRIDE ON，Blocking by ETS警訊仍無消失。<br/><br/>
+            <strong>B. 隔離/復歸(無法遙控復歸時執行)</strong><br />
+            B.1 確認無人按壓，手動ETS RESET(ETS OVERRIDE ON/OFF 1次)。<br/>
+            B.2 ETS RESET(ETS OVERRIDE ON/OFF 1次)無效，表示ETS迴路有斷線情形，手動ETS OVERRIDE。<br/><br/>
+            <strong>C. 轉供/復電(無法遙控復歸時執行)</strong><br />
+            維修人員通知行控，確認Blocking by ETS警訊消失後，手動直流盤送電。<br/><br/>
+            <strong>D. 後續</strong><br />
+            D.1 行控中心遙控復電後，該區段有緊急斷電需求時，由電力控制員進行遙控斷電，維修人員與行控中心保持聯繫至營運結束。<br/>
+            D.2 無法遙控復歸時，維修人員現場待命並與行控中心保持聯繫至營運結束。<br/><br/>
+        </p>
+        <h4>1.2板南土線：</h4>
+        <p>
+            <strong>A. 確認/檢視</strong><br />
+            行控遙控ETC OVERRIDE ON，PU BLOCKING仍然無法復歸。<br/><br/>
+            <strong>B. 隔離/復歸(無法遙控復歸時執行)</strong><br />
+            B.1 確認無人按壓，手動ETC BY-PASS(1次)及PU BLOCKING RESET。<br/>
+            B.2 ETC BY-PASS(1次)無效，表示ETS迴路有斷線情形，手動ETC BY-PASS(持續)及PU BLOCKING RESET。<br/><br/>
+            <strong>C. 轉供/復電(無法遙控復歸時執行)</strong><br />
+            維修人員通知行控，確認PU BLOCKING警訊消失後，手動直流盤送電。<br/><br/>
+            <strong>D. 後續</strong><br />
+            D.1 行控中心遙控復電後，該區段有緊急斷電需求時，由電力控制員進行遙控斷電，維修人員與行控中心保持聯繫至營運結束。<br/>
+            D.2 無法遙控復歸時，維修人員現場待命並與行控中心保持聯繫至營運結束。<br/><br/>
+        </p>
+        <h4>1.3 新蘆/松信線：</h4>
+        <p>
+            <strong>A.確認/檢視</strong><br />
+            行控遙控ETC OVERRIDE ON，ETC 高速斷路器投入允許 警報(ALARM)仍然無法復歸。<br/><br/>
+            <strong>B.隔離/復歸(無法遙控復歸時執行)</strong><br />
+            B.1 確認無人按壓ETS，手動ETC OVERRIDE(1次)及高速斷路器閉鎖排除後復歸。<br/>
+            B.2 ETC OVERRIDE(1次)無效，表示ETS迴路有斷線情形，手動ETC OVERRIDE(持續)及高速斷路器閉鎖排除後遙控復歸。<br/><br/>
+            <strong>C.轉供/復電(無法遙控復歸時執行)</strong><br />
+            維修人員通知行控，確認『閉鎖/緊急手動跳脫/外部連鎖跳脫 跳脫(TRIP)』警訊消失後，手動直流盤送電。<br/><br/>
+            <strong>D.後續</strong><br />
+            D.1 行控中心遙控復電後，該區段有緊急斷電需求時，由電力控制員進行遙控斷電，維修人員與行控中心保持聯繫至營運結束。<br/>
+            D.2 無法遙控復歸時，維修人員現場待命並與行控中心保持聯繫至營運結束。<br/><br/>
+        </p>
+      </div>
+      <div class="step">
+        <h3>2 機廠：</h3>
+        <h4>2.1淡新中線：</h4>
+        <p>
+            <strong>A. 確認/檢視</strong><br />
+            塔台遙控ETS OVERRIDE ON，Blocking by ETS警訊仍未消失。<br/><br/>
+            <strong>B. 隔離/復歸(無法遙控復歸時執行)</strong><br />
+            B.1 確認無人按壓，手動ETS RESET(ETS OVERRIDE ON/OFF 1次)。<br/>
+            B.2 ETS RESET(ETS OVERRIDE ON/OFF 1次)無效，表示ETS迴路有斷線情形，手動ETS OVERRIDE。<br/><br/>
+            <strong>C. 轉供/復電(無法遙控復歸時執行)</strong><br />
+            維修人員通知塔台，確認Blocking by ETS警訊消失後，手動直流盤送電。<br/><br/>
+            <strong>D. 後續</strong><br />
+            D.1 塔台遙控復電後，該區段有緊急斷電需求時，由塔台進行遙控斷電，維修人員與塔台保持聯繫，待離峰時進場檢修。<br/>
+            D.2 無法遙控復歸時，維修人員現場待命並與塔台保持聯繫，待離峰時進場檢修。<br/><br/>
+        </p>
+        <h4>2.2板南土線：</h4>
+        <p>
+            <strong>A. 確認/檢視</strong><br />
+            塔台遙控ETC OVERRIDE ON，PU BLOCKING仍然無法復歸。<br/><br/>
+            <strong>B. 隔離/復歸(無法遙控復歸時執行)</strong><br />
+            B.1 確認無人按壓，手動ETC BY-PASS(1次)及PU BLOCKING RESET。<br/>
+            B.2 ETC BY-PASS(1次)無效，表示ETS迴路有斷線情形，手動ETC BY-PASS(持續)及PU BLOCKING RESET。<br/><br/>
+            <strong>C. 轉供/復電(無法遙控復歸時執行)</strong><br />
+            維修人員通知塔台，確認PU BLOCKING警訊消失後，手動直流盤送電。<br/><br/>
+            <strong>D. 後續</strong><br />
+            D.1 塔台遙控復電後，該區段有緊急斷電需求時，由塔台進行遙控斷電，維修人員與塔台保持聯繫，待離峰時進場檢修。<br/>
+            D.2 無法遙控復歸時，維修人員現場待命並與塔台保持聯繫，待離峰時進場檢修。<br/><br/>
+        </p>
+        <h4>2.3 新蘆線：</h4>
+        <p>
+            <strong>A.確認/檢視</strong><br />
+            塔台遙控ETC OVERRIDE ON，ETC 高速斷路器投入允許 警報(ALARM)仍然無法復歸。<br/><br/>
+            <strong>B.隔離/復歸(無法遙控復歸時執行)</strong><br />
+            B.1 確認無人按壓ETS，手動ETC OVERRIDE(1次)及高速斷路器閉鎖排除後復歸。<br/>
+            B.2 ETC OVERRIDE(1次)無效，表示ETS迴路有斷線情形，手動ETC OVERRIDE(持續)及高速斷路器閉鎖排除後遙控復歸。<br/><br/>
+            <strong>C.轉供/復電(無法遙控復歸時執行)</strong><br />
+            維修人員通知行控，確認『閉鎖/緊急手動跳脫/外部連鎖跳脫 跳脫(TRIP)』警訊消失後，手動直流盤送電。<br/><br/>
+            <strong>D.後續</strong><br />
+            D.1 塔台遙控復電後，該區段有緊急斷電需求時，由塔台進行遙控斷電，維修人員與塔台保持聯繫，待離峰時進場檢修。<br/>
+            D.2 無法遙控復歸時，維修人員現場待命並與塔台保持聯繫，待離峰時進場檢修。<br/><br/>
+        </p>
+      </div>
+      <div class="step">
+        <h3>3 主線傳輸跳脫迴路斷線(板南土線、新蘆松信線適用)</h3>
+        <h4>3.1 確認/檢視</h4>
+        <p>
+            <strong>板南土線：</strong><br />
+            (1)確認IPPC出現直流盤PU BLOCKING及PCU Inter-tripping input。<br/>
+            (2)確認直流盤內K314電驛失磁。<br/><br/>
+            <strong>新蘆松信線：</strong><br />
+            (1)確認IPPC出現直流盤「鄰站傳輸跳脫輸入 跳脫(TRIP)」、「閉鎖/緊急手動跳脫/外部連鎖跳脫 跳脫(TRIP) 」。<br/>
+            (2)確認直流盤內K19B1電驛失磁。<br/>
+        </p>
+        <h4>3.2 復歸</h4>
+        <p>
+            <strong>板南土線：</strong><br />
+            將直流盤內X310端子台第46及47端子短接，使K314電驛激磁後，手動解除閉鎖。<br/><br />
+            <strong>新蘆松信線：</strong><br />
+            將直流盤內X3端子台第32及33端子短接，使K19B1電驛激磁後，手動解除閉鎖。<br/>
+        </p>
+        <h4>3.3 轉供/復電</h4>
+        <p>
+            A.維修人員通知行控，確認閉鎖警訊消失後，可進行送電；若無法遙控送電時，手動直流盤送電。<br />
+            B.仍無法解除閉鎖訊號，維修人員依行控中心調度程序指示，使用手動供電盒投入復電。<br />
+        </p>
+        <h4>3.4 後續</h4>
+        <p>
+            A.直流盤投入後，維修人員與行控中心保持聯繫至營運結束。<br />
+            B.使用手動供電盒投入復電後，維修人員現場待命並與行控中心保持聯繫至營運結束。<br />
+        </p>
+      </div>
+      <div class="step">
+        <h3>4 西門子直流盤保護單元異常(淡新中線適用)</h3>
+        <h4>4.1 確認/檢視</h4>
+        <p>
+            檢視IPPC顯示直流盤OFF訊息並伴隨「DI/DT instant.trip」或「DI/DT delayed.trip」警訊，且直流盤未自動投入。
+        </p>
+        <h4>4.2 隔離/復歸</h4>
+        <p>
+            A.關閉直流盤傳輸跳脫開關(F12)。<br />
+            B.將直流盤拖至測試位置，關閉直流盤控制電源(F11)。<br />
+            C.隔離直流盤保護電驛模組(F1)之A3及A4元件。<br />
+            D.開啟直流盤控制電源(F11)。<br />
+            E.將直流盤推至操作位置。<br />
+        </p>
+        <h4>4.3 轉供/復電</h4>
+        <p>
+            A.維修人員通知行控遙控投入送電。<br />
+            B.若直流盤仍跳脫，維修人員依行控中心調度程序指示，使用手動供電盒投入復電。<br />
+        </p>
+        <h4>4.4 後續</h4>
+        <p>
+            A.行控中心遙控復電後，維修人員現場待命觀察1小時，離場前開啟直流盤傳輸跳脫開關(F12)，於非營運時段再進行檢修作業。<br />
+            B.若使用手動供電盒投入復電後，維修人員現場待命並與行控中心保持聯繫至營運結束。<br />
+        </p>
+      </div>    </div>
+
+    <a href="../pageDepiction/8.html" class="button"
+      >故障發生時系統樣態、故障發生時影響範圍、應變處理所需工具儀器料件</a
+    >
+    <a href="../indexHigh.html" class="button">返回首頁</a>
+  </body>
+</html>

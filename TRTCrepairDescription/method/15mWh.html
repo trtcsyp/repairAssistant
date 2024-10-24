@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>現場維修人員應變處理方式</title>
+    <link rel="stylesheet" href="../styles/stylesM.css" />
+</head>
+
+<body>
+    <h1>現場維修人員應變處理方式</h1>
+    <!-- <a href="../appendix/flowChart/8Whfc.html" class="button">流程架構圖版本</a> -->
+    <div class="flowchart">
+        <div class="step">
+            <h3>1. 確認/檢視</h3>
+            <p>1.1復捷主變電站失能或復捷主變電站H盤CB1C無故跳脫，造成22kV來源喪失，導致中山國中站PPSS無750VDC供應至正電軌上。</p>
+            <p>1.2木捷主變電站失能或木捷主變電站H盤CB2D無故跳脫，造成22kV來源喪失，導致木柵機廠PPSS無750VDC供應至正電軌上。</p>
+        </div>
+        <div class="step">
+            <h3>2. 隔離/復歸</h3>
+            <div class="sub-step">
+                <h4>2.1 中山國中站PPSS 22kV來源失能:</h4>
+                <p>2.1.1 打開中山國中動力變電站22kV開關盤(INC)。</p>
+                <p>2.1.2 投入中山國中設備變電站22kV開關盤(OC)。</p>
+                <p>2.1.3 中山國中動力變電站22kV開關盤(CBC)才能投入，即可恢復中山國中站 PPSS 22kV用電。</p>
+            </div>
+            <div class="sub-step">
+                <h4>2.2 木柵機廠PPSS 22kV來源失能:</h4>
+                <p>2.2.1 打開木柵機廠動力變電站22kV開關盤(INC)。</p>
+                <p>2.2.2 投入木柵機廠設備變電站22kV開關盤(OD)。</p>
+                <p>2.2.3 木柵機廠動力變電站22kV開關盤(CBD)才能投入，即可恢復木柵機廠 PPSS 22kV用電。</p>
+            </div>
+        </div>
+        <div class="step">
+            <h3>3. 預警</h3>
+            <p>
+                送電後告知現場維修人員確認無煙、無火、無異常焦味後，維修人員現場待命觀察設備運轉情形，並與工程控制員保持聯繫。
+            </p>
+        </div>
+    </div>
+
+    <a href="../pageDepiction/15Wh.html" class="button">故障發生時系統樣態、故障發生時影響範圍、應變處理所需工具儀器料件</a>
+    <a href="../indexWenhu.html" class="button">返回首頁</a>
+</body>
+
+</html>
