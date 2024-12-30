@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>現場維修人員應變處理方式</title>
+    <link rel="stylesheet" href="../styles/stylesM.css" />
+</head>
+
+<body>
+    <h1>現場維修人員應變處理方式</h1>
+    <!-- <a href="../appendix/flowChart/8Whfc.html" class="button">流程架構圖版本</a> -->
+    <div class="flowchart">
+        <div class="step">
+            <h3>1. 確認/檢視</h3>
+            <div class="sub-step">
+                <p>1.1確認充電機輸出端及直流分電盤 (木柵段為輔助開關盤、內湖段為DDP)間之NFB/MCB開關是否跳脫或保險絲熔斷。再將充電機輸出端及直流分電盤各分路之NFB/MCB開關皆OFF或將熔斷之保險絲更新後隔離，以避免後續恢復控制電源時造成過載。</p>
+                <p>1.2若確認迴路損壞，依4.2.1處理。</p>
+                <p>1.3若確認蓄電池組殘存操作電壓可達46VDC (木柵段)、90VDC (內湖段)以上(或蓄電池組僅少量損壞，拆除仍可臨時整併處理提供電力)，依4.2.2處理。</p>
+                <p>1.4若蓄電池組操作電壓低於46VDC (木柵段)、90VDC (內湖段)或損壞嚴重，即採用移動式發電機及移動式充電機方式，依4.2.4處理。</p>
+            </div>
+        </div>
+        <div class="step">
+            <h3>2. 隔離/復歸</h3>
+            <div class="sub-step">
+                <p>2.1隔離迴路損壞處，利用原備用線路或採備用5.5mm2以上電纜線，拉明線處理。</p>
+                <p>2.2利用蓄電池組殘存操作電壓，依序將直流分電盤(木柵段為輔助開關盤、內湖段為DDP)各分路之NFB/MCB開關投入(或將更新之保險絲投入)控制電源、；並再恢復站體380VAC交流電源及任一台48VDC(木柵段)、110VDC(內湖段)充電機輸出端NFB/MCB開關投入供應穩定直流控制電源，進行4.3轉供/復電。</p>
+                <p>2.3利用移動式發電機供應移動式充電機電源後，將移動式充電機輸出電源併接至直流分電盤(木柵段為輔助開關盤、內湖段為DDP)匯流排，依序將直流分電盤各分路之NFB/MCB開關投入(或將更新之保險絲投入)控制電源；並再恢復站體380VAC交流電源及任一台48VDC(木柵段)、110VDC (內湖段)充電機輸出端NFB/MCB開關投入供應穩定直流控制電源，再拆除移動式充電機（後續應先補齊蓄電池組，以防電壓不穩定再次引起跳電），進行4.3轉供/復電。</p>
+            </div>
+        </div>
+        <div class="step">
+            <h3>3. 轉供/復電</h3>
+            <p>
+                請行控中心依程序進行電力調度。
+            </p>
+        </div>
+        <div class="step">
+            <h3>4. 後續</h3>
+            <p>
+                維修人員現場待命觀察設備運轉情形，並與工程控制員保持聯繫。
+            </p>
+        </div>
+    </div>
+
+    <a href="../pageDepiction/2Wh.html" class="button">故障發生時系統樣態、故障發生時影響範圍、應變處理所需工具儀器料件</a>
+    <a href="../indexWenhu.html" class="button">返回首頁</a>
+</body>
+
+</html>

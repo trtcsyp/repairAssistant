@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>現場維修人員應變處理方式</title>
+    <link rel="stylesheet" href="../styles/stylesM.css" />
+</head>
+
+<body>
+    <h1>現場維修人員應變處理方式</h1>
+    <!-- <a href="../appendix/flowChart/8Whfc.html" class="button">流程架構圖版本</a> -->
+    <div class="flowchart">
+        <div class="step">
+            <h3>1. 掌握到場前之資訊（遙控復歸、復電情形），若現場有火警發生時「依自動滅火氣體釋放後人員進入機房作業流程圖」執行，<a href="../appendix/3app.html">詳附件三</a>。</h3>
+        </div>
+        <div class="step">
+            <h3>2.1內湖段動力變電站ND04_ISP:DC FRAME LEAKAGE TRIP動作</h3>
+            <div class="sub-step">
+                <p><strong>A.確認/檢視</strong></p>
+                <p>A.1檢視現場圖控及IPPC確認跳電型態。可分為(ISP、HSCB、PRSC、GGBS) 的框架對地漏電過電流所造成跳脫。</p>
+                <p>A.2確認ISP(ND04)盤面警示燈號，以判斷漏電來源及故障真假。</p>
+                <p><strong>B.隔離/復歸(無法遙控復歸時執行)</strong></p>
+                <p>B.1若工程控制員無法使用IPPC遙控復歸動力變電站『ND04_ISP:DC FRAME LEAKAGE TRIP』，由維修人員抵達現場後以手動壓按ISP(ND04)盤面「RESET」復歸鈕，並立即回報工程控制員已復歸完成。</p>
+                <p>B.2若RESET無效，則由維修人員使用「現場遠端遙控復歸盤」(O/R盤)，執行動力變電站ISP(ND04) DC FRAME LEAKAGE TRIP OVERRIDE後。</p>
+                <p>B.3若OVERRIDE無效，則執行ND04-ND08 TRANSFER TRIP OVERRIDE。</p>
+                <p><strong>C.轉供/復電(無法遠端復歸時執行)</strong></p>
+                <p>請工程控制員將該供電區域的接地開關打開，遙控鄰站之直流盤投入送電。</p>
+            </div>
+        </div>
+        <div class="step">
+            <h3>2.2 內湖段動力變電站ISN(ND02)DC FRAME LEAKAGE TRIP動作</h3>
+            <div class="sub-step">
+                <p><strong>A.確認/檢視</strong></p>
+                <p>A.1檢視現場圖控及IPPC確認跳電型態。可分為(RT、R、ISN)的框架對地漏電過電流所造成跳脫。</p>
+                <p>A.2確認ISN(ND02)盤面警示燈號，以判斷漏電來源及故障真假。</p>
+                <p><strong>B.隔離/復歸(無法遙控復歸時執行)</strong></p>
+                <p>B.1若工程控制員無法使用IPPC遙控復歸動力變電站『ISN(ND02) DC FRAME LEAKAGE TRIP』，由維修人員抵達現場後以手動壓按ISN(ND02)盤面「RESET」復歸鈕。</p>
+                <p>B.2若RESET無效，由維修人員使用「現場遠端遙控復歸盤」(O/R盤)，執行動力變電站ISN(ND02) DC FRAME LEAKAGE TRIP OVERRIDE。</p>
+                <p><strong>C.轉供/復電(無法遠端復歸時執行)</strong></p>
+                <p>請工程控制員將該供電區域的接地開關打開，遙控鄰站之直流盤投入送電。</p>
+            </div>
+        </div>
+        <div class="step">
+            <h3>2.3內湖段間隙變電站ND03_PRSC:DC FRAME LEAKAGE TRIP動作</h3>
+            <div class="sub-step">
+                <p><strong>A.確認/檢視</strong></p>
+                <p>A.1檢視現場圖控及IPPC確認跳電型態。可分為(HSCB、PRSC、GGBS)的框架對地漏電過電流所造成跳脫。</p>
+                <p>A.2確認PRSC(ND03)盤面警示燈號，以判斷漏電來源及故障真假。</p>
+                <p><strong>B.隔離/復歸(無法遙控復歸時執行)</strong></p>
+                <p>B.1若工程控制員無法使用IPPC遙控復歸間隙變電站『ND03 DC FRAME LEAKAGE TRIP』，由維修人員抵達現場後以手動壓按PRSC(ND03)盤面「RESET」復歸鈕，並立即回報工程控制員已復歸完成。</p>
+                <p>B.2若RESET無效，由維修人員使用「現場遠端遙控復歸盤」(O/R盤)，執行間隙變電站PRSC(ND03)DC FRAME LEAKAGE TRIP OVERRIDE。</p>
+                <p><strong>C.轉供/復電(無法遠端復歸時執行)</strong></p>
+                <p>請工程控制員將該供電區域的接地開關打開，遙控鄰站之直流盤投入送電。</p>
+            </div>
+        </div>
+        <div class="step">
+            <h3>3. 後續</h3>
+            <div class="sub-step">
+                <p><strong>現場維修人員進一步檢視確認設備損害範圍程度：</strong></p>
+                <p>A.湖段動力變電站ISP(ND04)DC FRAME LEAKAGE TRIP動作檢視ISP、HSCB、PRSC、GGBS盤體箱體之元件、導線、螺絲等有無異常碰觸盤體或箱體。</p>
+                <p>B.內湖段動力變電站ISN(ND02)DC FRAME LEAKAGE TRIP動作檢視RT、ISN、R盤體箱體之元件、導線、螺絲等有無異常碰觸盤體或箱體。</p>
+                <p>C.內湖段間隙變電站PRSC(ND03)DC FRAME LEAKAGE TRIP動作檢視HSCB、PRSC、GGBS盤體箱體之元件、導線、螺絲等有無異常碰觸盤體或箱體。</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="../pageDepiction/6Wh.html" class="button">故障發生時系統樣態、故障發生時影響範圍、應變處理所需工具儀器料件</a>
+    <a href="../indexWenhu.html" class="button">返回首頁</a>
+</body>
+
+</html>
